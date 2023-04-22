@@ -1,3 +1,4 @@
+
 class Contact {
     firstName
     lastName
@@ -103,11 +104,23 @@ class Contact {
         return "First Name : "+ this.firstName + ", Last Name : "+ this.lastName + ", Address : " + this.address + ", City : "+ this.city + ", State : "+ this.state +", Zip : "+ this.zip+ ", Phone Number : "+ this.phone + ", Email : "+ this.email;
     }
 }
+    let addressBookArray = new Array();
+
 
     try {
-    let contact = new Contact("Prathamesh", "Adam", "Kuchan Nagar", "Solapur", "Maharastra", "413005", "8983930906", "prathamadam10@gmail.com" )
-     console.log(contact.toString());
+    addressBookArray.push(new Contact("Prathamesh", "Adam", "Kuchan Nagar", "Solapur", "Maharastra", "413005", "8983930906", "prathamadam10@gmail.com" ));
+     
     }
     catch(e){
         console.log(e)
     }
+
+    try {
+        addressBookArray.push(new Contact("Samarth", "Mutkiri", "Mallikarjun Nagar", "Solapur", "Maharastra", "413006", "8928928143", "samarthmutkiri@gmail.com" ));
+         
+        }
+        catch(e){
+            console.log(e)
+        }
+        console.log(addressBookArray);
+    
