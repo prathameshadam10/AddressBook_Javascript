@@ -138,6 +138,13 @@ class Contact {
           console.log("Contact Does Not Exist");
       }
   }
+  function deleteContact(firstName, lastName){
+   if(contactExists(firstName, lastName)){
+       addressBookArray = addressBookArray.filter((contact) => contact.firstName != firstName && contact.lastName != lastName);
+   }else{
+       console.log("Contact Does Not Exist");
+   }
+}
   
     try {
     addressBookArray.push(new Contact("Prathamesh", "Adam", "Kuchan Nagar", "Solapur", "Maharastra", "413005", "8983930906", "prathamadam10@gmail.com" ));
@@ -157,5 +164,9 @@ class Contact {
         console.log(addressBookArray);
         console.log("\nAfter Editing Contact")
          editContact("Pratham","Sharma","address","Pune");
+
          console.log(addressBookArray);
 
+         console.log("\nAfter Deleting Contact");
+         deleteContact("Samarth","Mutkiri")
+         console.log(addressBookArray);
