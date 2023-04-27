@@ -156,6 +156,14 @@ function addContact(contact) {
        throw "Contact is Present in the Address Book";
 }
 console.log("\nAdding Duplicate Contact");
+
+function searchContactByCity(city) {
+   return addressBookArray.filter((contact) => contact.city == city);
+}
+
+function searchContactByState(state) {
+   return addressBookArray.filter((contact) => contact.state == state);
+}
 try {
     addContact(secondContact);
     addContact(firstContact);
@@ -163,3 +171,35 @@ try {
     console.error(e);
 }
 console.log(addressBookArray);
+  
+    try {
+    addressBookArray.push(new Contact("Prathamesh", "Adam", "Kuchan Nagar", "Solapur", "Maharastra", "413005", "8983930906", "prathamadam10@gmail.com" ));
+     
+    }
+    catch(e){
+        console.log(e)
+    }
+
+    try {
+        addressBookArray.push(new Contact("Samarth", "Mutkiri", "Mallikarjun Nagar", "Solapur", "Maharastra", "413006", "8928928143", "samarthmutkiri@gmail.com" ));
+         
+        }
+        catch(e){
+            console.log(e)
+        }
+        console.log(addressBookArray);
+        console.log("\nAfter Editing Contact")
+         editContact("Pratham","Sharma","address","Pune");
+
+         console.log(addressBookArray);
+
+         console.log("\nAfter Deleting Contact");
+         deleteContact("Samarth","Mutkiri")
+         console.log(addressBookArray);
+         console.log("\nCount of Contacts : " + addressBookArray.reduce(getCountOfContacts, 0));
+
+         console.log("\nSearch Contact By City");
+         console.log(searchContactByCity("Solapur"));
+
+         console.log("\nSearch Contact By State");
+         console.log(searchContactByState("Mahrastra"));
