@@ -145,6 +145,10 @@ class Contact {
        console.log("Contact Does Not Exist");
    }
 }
+function getCountOfContacts(count) {
+   count += 1;
+   return count;
+}
   
     try {
     addressBookArray.push(new Contact("Prathamesh", "Adam", "Kuchan Nagar", "Solapur", "Maharastra", "413005", "8983930906", "prathamadam10@gmail.com" ));
@@ -170,3 +174,4 @@ class Contact {
          console.log("\nAfter Deleting Contact");
          deleteContact("Samarth","Mutkiri")
          console.log(addressBookArray);
+         console.log("\nCount of Contacts : " + addressBookArray.reduce(getCountOfContacts, 0));
