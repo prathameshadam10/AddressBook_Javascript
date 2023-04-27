@@ -164,6 +164,15 @@ function searchContactByCity(city) {
 function searchContactByState(state) {
    return addressBookArray.filter((contact) => contact.state == state);
 }
+
+function viewContactsByCity(city){
+   return addressBookArray.filter((contact) => contact.city == city);
+}
+
+function viewContactsByState(state){
+   return addressBookArray.filter((contact) => contact.state == state);
+}
+
 try {
     addContact(secondContact);
     addContact(firstContact);
@@ -203,3 +212,9 @@ console.log(addressBookArray);
 
          console.log("\nSearch Contact By State");
          console.log(searchContactByState("Mahrastra"));
+
+         console.log("\nView Contacts By City : Solapur \n" );
+         console.log(viewContactsByCity("Solapur"));
+
+         console.log("\nView Contacts By State : Maharastra \n" );
+         console.log(viewContactsByState("Maharastra"));
